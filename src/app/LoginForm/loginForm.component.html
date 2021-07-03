@@ -1,0 +1,73 @@
+<form
+  #LoginForm="ngForm"
+  novalidate
+  (ngSubmit)="showConsole(LoginForm.value)"
+  autocomplete="off"
+>
+  <br />
+  <br />
+  <br />
+  <i class="fab fa-bandcamp fa-3x"></i>
+  <br />
+  <br />
+  <br />
+
+  <input
+    [(ngModel)]="Username"
+    class="form-control"
+    type="text"
+    name="Username"
+    id="Username"
+    placeholder="Username"
+    required
+  />
+  <br />
+
+  <div
+    *ngIf="
+      LoginForm.controls.Username?.invalid &&
+      (LoginForm.controls.Username?.touched || mouseoverLogin)
+    "
+  >
+    Username is required!
+  </div>
+
+  <br />
+
+  <input
+    [(ngModel)]="Password"
+    class="form-control"
+    type="password"
+    name="Password"
+    id="Password"
+    placeholder="Password"
+    required
+  />
+  <br />
+
+  <div
+    *ngIf="
+      LoginForm.controls.Password?.invalid &&
+      (LoginForm.controls.Password?.touched || mouseoverLogin)
+    "
+  >
+    Password is required!
+  </div>
+  <br />
+
+  <div class="box-2">
+    <button
+      (mouseenter)="mouseoverLogin = true"
+      (mouseonLeave)="mouseoverLogin = false"
+      [disabled]="LoginForm.invalid"
+      type="submit"
+      class="btn btn-two"
+    >
+      Login
+    </button>
+  </div>
+</form>
+<div class="title">
+  <h3>Welcome to Sunset...</h3>
+  <p>Find what ever you want..</p>
+</div>

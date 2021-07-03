@@ -1,0 +1,166 @@
+body {
+  height: 100%;
+  background: url("./assets/background.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  justify-content: flex-end;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.808);
+  width: 100%;
+  color: white;
+  height: 75px;
+}
+.navbar ul {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar a {
+  float: right;
+  text-decoration: none;
+  color: white;
+  padding-right: 15%;
+  font-size: 20px;
+}
+
+div[class*="box"] {
+  height: 33.33%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-2 {
+  background-color: #3c3c3c10;
+}
+
+.btn-two {
+  color: #fff;
+  transition: all 0.5s;
+  position: relative;
+}
+.btn-two span {
+  z-index: 2;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.btn-two::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.btn-two::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.btn-two:hover::before {
+  transform: rotate(-45deg);
+  background-color: rgba(255, 255, 255, 0);
+}
+.btn-two:hover::after {
+  transform: rotate(45deg);
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.btn {
+  line-height: 50px;
+  height: 60px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+}
+
+.navbar a:hover {
+  color: rgb(206, 25, 94);
+}
+
+.navbar li {
+  list-style: none;
+  padding-right: 5%;
+}
+
+form {
+  width: 35%;
+  float: right;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.623);
+  box-shadow: 10px 10px rgb(0, 0, 0);
+  height: 600px;
+  text-align: center;
+  margin-top: 10%;
+  margin-right: 5%;
+}
+
+.links {
+  float: right;
+  display: flex;
+  flex-direction: row;
+  margin-right: 5%;
+}
+em {
+  padding: auto;
+  margin: 5px;
+}
+.form-control {
+  width: 75%;
+  margin: auto;
+}
+
+.alert {
+  width: 65%;
+  height: auto;
+  margin: auto;
+  background-color: rgb(170, 75, 75);
+  padding: auto;
+  font-size: 15px;
+}
+
+.title {
+  float: left;
+  color: white;
+  margin-top: 22%;
+  margin-left: 5%;
+}
+
+@media only screen and (max-width: 768px) {
+  .title {
+    display: none;
+  }
+  form {
+    margin: auto;
+    float: none;
+    width: 75%;
+    margin-top: 15%;
+  }
+
+  .navbar {
+    height: 50px;
+  }
+  .navbar a {
+    font-size: 15px;
+  }
+}
